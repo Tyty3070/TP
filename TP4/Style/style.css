@@ -1,36 +1,51 @@
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    margin: 20px;
-    color: #333;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+    color: #2d3436;
+    background-color: #fcfcfc;
 }
+
 h1 {
     color: #e8580b;
-    border-bottom: 3px solid #8f99ab;
+    border-bottom: 4px solid #8f99ab;
     text-transform: uppercase;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
 }
+
 h2 {
-    background-color: #4A69BD;
+    background: linear-gradient(135deg, #4A69BD, #3c55a5);
     color: white;
-    padding: 8px;
-    border-radius: 4px;
+    padding: 12px 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
 h3 {
     color: #0c2461;
-    border-left: 5px solid #610c56;
-    padding-left: 10px;
+    border-left: 6px solid #610c56;
+    padding-left: 15px;
+    margin-top: 25px;
 }
+
 code, pre {
-    background-color: #f1f2f6;
+    background-color: #f8f9fa;
     color: #2f3542;
-    padding: 5px;
+    padding: 15px;
     display: block;
-    border-left: 3px solid #000000;
-    margin: 10px 0;
-    font-family: Consolas, monospace;
+    border-left: 4px solid #2f3542;
+    margin: 15px 0;
+    font-family: 'Cascadia Code', 'Consolas', monospace;
+    border-radius: 0 4px 4px 0;
+    font-size: 0.95em;
 }
+
 #sommaire {
-    background-color: #ffee03;
-    border: 1px solid #eb0606;
-    padding: 10px;
-    margin-bottom: 20px;
+    background-color: #fff9c4; 
+    border: 1px solid #ff5252;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
 }
