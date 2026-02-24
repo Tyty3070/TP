@@ -4,7 +4,7 @@ body {
     color: #333;
 }
 h1 {
-    color: #0bd6e8;
+    color: #e8580b;
     border-bottom: 3px solid #64676d;
     text-transform: uppercase;
 }
@@ -29,7 +29,7 @@ code, pre {
     font-family: Consolas, monospace;
 }
 #sommaire {
-    background-color: #03ff20;
+    background-color: #ffee03;
     border: 1px solid #eb0606;
     padding: 10px;
     margin-bottom: 20px;
