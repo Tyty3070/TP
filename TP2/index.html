@@ -10,6 +10,7 @@
             --bg-color: #f8fafc;
             --text-color: #1e293b;
             --card-bg: #ffffff;
+            --button-hover: #1d4ed8;
         }
 
         body {
@@ -22,7 +23,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 600px;
             margin: 0 auto;
         }
 
@@ -36,50 +37,50 @@
             margin-bottom: 10px;
         }
 
-        .tp-grid {
-            display: grid;
-            gap: 20px;
-        }
-
-        .tp-card {
+        .tp-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
             background: var(--card-bg);
-            padding: 20px;
+            padding: 30px;
             border-radius: 12px;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .tp-item {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: transform 0.2s;
+            flex-direction: column;
+            align-items: flex-start; /* Aligne le bouton à gauche sous le titre */
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 20px;
         }
 
-        .tp-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        .tp-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
         }
 
-        .tp-info h2 {
-            margin: 0;
+        .tp-item h2 {
+            margin: 0 0 12px 0;
             font-size: 1.2rem;
+            font-weight: 600;
         }
 
-        .tp-info p {
-            margin: 5px 0 0;
-            font-size: 0.9rem;
-            color: #64748b;
-        }
-
-        .btn-link {
+        .btn-tp {
+            display: inline-block;
             background-color: var(--primary-color);
             color: white;
             text-decoration: none;
             padding: 10px 20px;
-            border-radius: 6px;
-            font-weight: bold;
+            border-radius: 8px;
             font-size: 0.9rem;
+            font-weight: 500;
+            transition: background 0.3s ease, transform 0.2s ease;
         }
 
-        .btn-link:hover {
-            background-color: #1d4ed8;
+        .btn-tp:hover {
+            background-color: var(--button-hover);
+            transform: translateX(5px); /* Petit effet de mouvement au survol */
         }
 
         footer {
@@ -95,25 +96,30 @@
 <div class="container">
     <header>
         <h1>Tableau de bord des TP</h1>
-        <p>Retrouvez ici l'ensemble de mes rendus et projets.</p>
+        <p>Accédez rapidement à mes derniers projets.</p>
     </header>
 
-    <div class="tp-grid">
-        <div class="tp-card">
-            <div class="tp-info">
-                <h2>TP 03 - Introduction au HTML</h2>
-            </div>
-            <a href="https://tyty3070.github.io/TP/TP3/tp3.html" class="btn-link">Voir le projet</a>
+    <div class="tp-list">
+        <div class="tp-item">
+            <h2>TP 03 - Introduction au HTML</h2>
+            <a href="https://tyty3070.github.io/TP/TP3/tp3.html" class="btn-tp" target="_blank">
+                Ouvrir le projet HTML
+            </a>
         </div>
 
-        <div class="tp-card">
-            <div class="tp-info">
-                <h2>TP 04 - Les liens</h2>
-            </div>
-            <a href="https://tyty3070.github.io/TP/TP4/index.html" class="btn-link">Voir le projet</a>
+        <div class="tp-item">
+            <h2>TP 04 - Les liens</h2>
+            <a href="https://tyty3070.github.io/TP/TP4/index.html" class="btn-tp" target="_blank">
+                Consulter l'exercice 1
+            </a>
+            <a href="https://tyty3070.github.io/TP/TP4/index.html" class="btn-tp" target="_blank">
+                Consulter l'exercice 2
+            </a>
+            <a href="https://tyty3070.github.io/TP/TP4/index.html" class="btn-tp" target="_blank">
+                Consulter l'exercice 3
+            </a>
         </div>
-
-        </div>
+    </div>
 
     <footer>
         &copy; 2026 - BERTHEAU Trystan - Étudiant en BTS SIO SISR
