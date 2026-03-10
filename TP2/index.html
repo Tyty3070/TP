@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes Travaux Pratiques</title>
+    <title>Mes Travaux Pratiques | Trystan Bertheau</title>
     <style>
         :root {
             --primary-color: #2563eb;
@@ -11,10 +11,11 @@
             --text-color: #1e293b;
             --card-bg: #ffffff;
             --button-hover: #1d4ed8;
+            --border-color: #f1f5f9;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
@@ -23,7 +24,7 @@
         }
 
         .container {
-            max-width: 600px;
+            max-width: 700px; /* Légèrement élargi pour plus de confort */
             margin: 0 auto;
         }
 
@@ -35,6 +36,7 @@
         h1 {
             color: var(--primary-color);
             margin-bottom: 10px;
+            font-size: 2rem;
         }
 
         .tp-list {
@@ -44,16 +46,16 @@
             background: var(--card-bg);
             padding: 30px;
             border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
 
         .tp-item {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            border-bottom: 1px solid #f1f5f9;
+            border-bottom: 1px solid var(--border-color);
             padding-bottom: 20px;
-            gap: 10px; /* Ajout d'un espace entre les boutons */
+            gap: 12px;
         }
 
         .tp-item:last-child {
@@ -62,9 +64,16 @@
         }
 
         .tp-item h2 {
-            margin: 0 0 2px 0;
-            font-size: 1.2rem;
+            margin: 0;
+            font-size: 1.25rem;
             font-weight: 600;
+        }
+
+        /* Conteneur pour aligner les boutons horizontalement s'il y en a plusieurs */
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .btn-tp {
@@ -72,23 +81,26 @@
             background-color: var(--primary-color);
             color: white;
             text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-size: 0.9rem;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.85rem;
             font-weight: 500;
-            transition: background 0.3s ease, transform 0.2s ease;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
         }
 
         .btn-tp:hover {
             background-color: var(--button-hover);
-            transform: translateX(5px);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(37, 99, 235, 0.2);
         }
 
         footer {
             text-align: center;
             margin-top: 50px;
-            font-size: 0.8rem;
-            color: #94a3b8;
+            padding-bottom: 20px;
+            font-size: 0.85rem;
+            color: #64748b;
         }
     </style>
 </head>
@@ -97,72 +109,58 @@
 <div class="container">
     <header>
         <h1>Tableau de bord des TP</h1>
-        <p>Accédez rapidement à mes derniers projets.</p>
+        <p>Accédez aux projets réalisés en BTS SIO SISR.</p>
     </header>
 
-    <div class="tp-list">
-        <div class="tp-item">
+    <main class="tp-list">
+        <section class="tp-item">
             <h2>TP 03 - Introduction au HTML</h2>
-            <a href="https://tyty3070.github.io/TP/TP3/tp3.html" class="btn-tp" target="_blank">
-                Ouvrir le projet HTML
-            </a>
-        </div>
+            <div class="btn-group">
+                <a href="https://tyty3070.github.io/TP/TP3/tp3.html" class="btn-tp" target="_blank" rel="noopener">
+                    Ouvrir le projet
+                </a>
+            </div>
+        </section>
 
-        <div class="tp-item">
+        <section class="tp-item">
             <h2>TP 04 - Les Liens</h2>
-            <a href="https://tyty3070.github.io/TP/TP4/index.html" class="btn-tp" target="_blank">
-                Ouvrir le projet 
-            </a>
-        </div>
+            <div class="btn-group">
+                <a href="https://tyty3070.github.io/TP/TP4/index.html" class="btn-tp" target="_blank" rel="noopener">
+                    Ouvrir le projet
+                </a>
+            </div>
+        </section>
 
-        <div class="tp-item">
-            <h2>TP 05 - Les tableaux</h2>
-            <a href="https://tyty3070.github.io/TP/TP5/exercice_1.html" class="btn-tp" target="_blank">
-                Consulter l'exercice 1
-            </a>
-            <a href="https://tyty3070.github.io/TP/TP5/exercice_2.html" class="btn-tp" target="_blank">
-                Consulter l'exercice 2
-            </a>
-            <a href="https://tyty3070.github.io/TP/TP5/exercice_3.html" class="btn-tp" target="_blank">
-                Consulter l'exercice 3
-            </a>
-        </div>
+        <section class="tp-item">
+            <h2>TP 05 - Les Tableaux</h2>
+            <div class="btn-group">
+                <a href="https://tyty3070.github.io/TP/TP5/exercice_1.html" class="btn-tp" target="_blank" rel="noopener">Exercice 1</a>
+                <a href="https://tyty3070.github.io/TP/TP5/exercice_2.html" class="btn-tp" target="_blank" rel="noopener">Exercice 2</a>
+                <a href="https://tyty3070.github.io/TP/TP5/exercice_3.html" class="btn-tp" target="_blank" rel="noopener">Exercice 3</a>
+            </div>
+        </section>
 
-        <div class="tp-item">
-            <h2>TP 06 - Les images</h2>
-            <a href="https://tyty3070.github.io/TP/TP6/index.html" class="btn-tp" target="_blank">
-                Ouvrir le projet 
-            </a>
-        </div>
+        <section class="tp-item">
+            <h2>TP 06 - Les Images</h2>
+            <div class="btn-group">
+                <a href="https://tyty3070.github.io/TP/TP6/index.html" class="btn-tp" target="_blank" rel="noopener">Ouvrir le projet</a>
+            </div>
+        </section>
 
-        <div class="tp-item">
+        <section class="tp-item">
             <h2>TP 07 - Zoning d'une page web</h2>
-            <a href="https://tyty3070.github.io/TP/TP7/exercice1.html" class="btn-tp" target="_blank">
-                Consulter l'exercice 1
-            </a>
-            <a href="https://tyty3070.github.io/TP/TP7/Exercice 2/zoning1/zoning1.html" class="btn-tp" target="_blank">
-                Consulter l'exercice 2 zoning 1
-            </a>
-            <a href="https://tyty3070.github.io/TP/TP7/Exercice 2/zoning2/zoning2.html" class="btn-tp" target="_blank">
-                Consulter l'exercice 2 zoning 2
-            </a>
-            <a href="https://tyty3070.github.io/TP/TP7/Exercice 2/zoning3/zoning3.html" class="btn-tp" target="_blank">
-                Consulter l'exercice 2 zoning 3
-            </a>
-            <a href="https://tyty3070.github.io/TP/TP7/Exercice 2/zoning4/zoning4.html" class="btn-tp" target="_blank">
-                Consulter l'exercice 2 zoning 4
-            </a>
-            <a href="https://tyty3070.github.io/TP/TP7/Exercice 2/zoning5/zoning5.html" class="btn-tp" target="_blank">
-                Consulter l'exercice 2 zoning 5
-            </a>
-            <a href="https://tyty3070.github.io/TP/TP7/Exercice 2/zoning6/zoning6.html" class="btn-tp" target="_blank">
-                Consulter l'exercice 2 zoning 6
-            </a>
-            <a href="https://tyty3070.github.io/TP/TP7/Exercice 2/zoning7/zoning7.html" class="btn-tp" target="_blank">
-                Consulter l'exercice 2 zoning 7
-            </a>
-        </div>
-    </div>
+            <div class="btn-group">
+                <a href="https://tyty3070.github.io/TP/TP7/exercice1.html" class="btn-tp" target="_blank" rel="noopener">Exercice 1</a>
+                <a href="https://tyty3070.github.io/TP/TP7/Exercice%202/zoning1/zoning1.html" class="btn-tp" target="_blank" rel="noopener">Zoning 1</a>
+                <a href="https://tyty3070.github.io/TP/TP7/Exercice%202/zoning2/zoning2.html" class="btn-tp" target="_blank" rel="noopener">Zoning 2</a>
+                <a href="https://tyty3070.github.io/TP/TP7/Exercice%202/zoning3/zoning3.html" class="btn-tp" target="_blank" rel="noopener">Zoning 3</a>
+                <a href="https://tyty3070.github.io/TP/TP7/Exercice%202/zoning4/zoning4.html" class="btn-tp" target="_blank" rel="noopener">Zoning 4</a>
+                <a href="https://tyty3070.github.io/TP/TP7/Exercice%202/zoning5/zoning5.html" class="btn-tp" target="_blank" rel="noopener">Zoning 5</a>
+                <a href="https://tyty3070.github.io/TP/TP7/Exercice%202/zoning6/zoning6.html" class="btn-tp" target="_blank" rel="noopener">Zoning 6</a>
+                <a href="https://tyty3070.github.io/TP/TP7/Exercice%202/zoning7/zoning7.html" class="btn-tp" target="_blank" rel="noopener">Zoning 7</a>
+            </div>
+        </section>
+    </main>
 
     <footer>
         &copy; 2026 - BERTHEAU Trystan - Étudiant en BTS SIO SISR
