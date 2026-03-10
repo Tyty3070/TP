@@ -1,0 +1,39 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+.zone-haut {
+    background-color: #ff5f5f; 
+    height: 15vh;            
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.conteneur-principal {
+    display: flex;
+    height: 85vh;          
+
+.zone-gauche {
+    background-color: #5b8aff; 
+    width: 20%;              
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.zone-milieu {
+    background-color: #5edb86; 
+    flex-grow: 1;            
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.zone-droite {
+    background-color: #9c714d; 
+    width: 20%;             
+    padding: 10px;
+    box-sizing: border-box;
+}}

@@ -1,0 +1,34 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+
+.conteneur-haut {
+    display: flex;
+    height: 85vh;
+}
+
+.zone-gauche {
+    background-color: #3ca395; 
+    flex: 1;                  
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.zone-droite {
+    background-color: #a043a3; 
+    flex: 1;              
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.zone-bas {
+    background-color: #f2c100; 
+    height: 15vh;  
+    padding: 10px;
+    box-sizing: border-box;
+}

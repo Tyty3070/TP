@@ -1,0 +1,37 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column; 
+
+.zone-haut, .zone-bas {
+    background-color: #3ca395;
+    height: 12vh;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.zone-menu {
+    background-color: #a043a3;
+    height: 6vh;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    color: black;
+}
+
+.conteneur-milieu {
+    flex-grow: 1;          
+    background-color: white;
+    padding: 20px;         
+    box-sizing: border-box;
+}
+
+.zone-jaune {
+    background-color: #f2c100;
+    height: 100%;         
+    padding: 10px;
+    box-sizing: border-box;
+}}
