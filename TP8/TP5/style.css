@@ -1,0 +1,41 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #333;
+    margin-top: 20px;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+th, td {
+    border: 1px solid #666;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* On réutilise les couleurs de l'exercice 1 */
+.header-vacances { background-color: #888; color: white; }
+.zone-a { background-color: #f39200; color: white; }
+.zone-b { background-color: #0072bc; color: white; }
+.zone-c { background-color: #92c01f; color: white; }
+
+.col-titre {
+    background-color: #e6e6e6;
+    font-weight: bold;
+}
+
+code {
+    background-color: #f4f4f4;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: "Courier New", monospace;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}

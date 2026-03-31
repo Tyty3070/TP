@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Cours JS - Les Bases</title>
+    <link rel="stylesheet" href="../../../Style/style.css">
+</head>
+<body>
+    <nav>
+        <a href="../../../index.html">Retour Accueil</a> | 
+        <a href="../liste_js.html">Retour Liste JS</a>
+    </nav>
+
+    <h1>LANGAGE JAVASCRIPT : LES BASES</h1>
+
+    <div id="sommaire">
+        <h2>Sommaire</h2>
+        <ul>
+            <li><a href="#structure">1. Structure de base</a></li>
+            <li><a href="#commentaires">2. Les commentaires</a></li>
+            <li><a href="#variables">3. Déclarations de variables</a></li>
+            <li><a href="#types">4. Les différents types</a></li>
+            <li><a href="#es">5. Fonctions d'Entrée/Sortie</a></li>
+        </ul>
+    </div>
+
+    <h2 id="structure">1. STRUCTURE DE BASE</h2>
+    <p>Lorsque le code JavaScript se trouve dans un fichier séparé (.js), on suit cette structure :</p>
+    
+    <pre><code>
+/* zone d'en-tête */
+/* déclaration des variables globales */
+let declaration1;
+/* définition des fonctions */
+function maFonction() { ... }
+    </code></pre>
+
+    <h2 id="commentaires">2. LES COMMENTAIRES</h2>
+    <p>Les commentaires permettent une relecture de programme (travail en équipe).</p>
+    <ul>
+        <li><code>//</code> : Commentaire sur une ligne</li>
+        <li><code>/* ... */</code> : Commentaire multi-lignes</li>
+    </ul>
+
+    <h2 id="variables">3. DECLARATION DE VARIABLES</h2>
+    <p>JavaScript est "faiblement typé". On utilise <code>let</code> pour une variable et <code>const</code> pour une constante.</p>
+    <code>let a = 3; // a est un Number</code>
+
+    <h2 id="types">4. LES DIFFÉRENTS TYPES</h2>
+    <p>Le JavaScript a 8 types principaux : Number, String, Boolean, Null, Undefined, BigInt, Object et Symbol.</p>
+
+    <h2 id="es">5. FONCTIONS D'ENTRÉE/SORTIE</h2>
+    <ul>
+        <li><code>window.alert("Message");</code> : Affiche une boîte.</li>
+        <li><code>window.prompt("Question");</code> : Demande une saisie.</li>
+    </ul>
+
+    <footer>
+        <hr>
+        <h3>Contact et ressources</h3>
+        <p><a href="Cours3_Les bases_JS.pdf" download>Télécharger le cours (PDF)</a></p>
+        <p><a href="mailto:prof@lycee.fr?subject=Cours%20Javascript">Envoyer un mail à l'auteur</a></p>
+        <p><a href="#sommaire">Retour au sommaire</a></p>
+    </footer>
+</body>
+</html>

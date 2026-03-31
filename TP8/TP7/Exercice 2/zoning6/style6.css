@@ -1,0 +1,44 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.zone-haut { background-color: #800080; color: white; height: 10vh; padding: 10px; box-sizing: border-box; text-align: center; }
+
+.menu { background-color: #0000ff; color: white; height: 5vh; padding: 5px; box-sizing: border-box; text-align: center; }
+
+.conteneur-rose {
+    flex-grow: 1;
+    background-color: #ffc0cb; 
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.grille-16 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(4, 1fr);  
+    gap: 2px; 
+    height: 100%;
+}
+
+.pz {
+    display: flex;
+    align-items: center;   
+    justify-content: center; 
+    font-size: 0.8em;
+    color: white;
+    border: 1px solid white; 
+}
+
+
+.rouge { background-color: #ff0000; }
+.orange { background-color: #ffa500; }
+.vert { background-color: #008000; }
+.marron { background-color: #a52a2a; }
+
+.zone-bas { background-color: #c0c0c0; height: 10vh; padding: 10px; box-sizing: border-box; text-align: center; }
