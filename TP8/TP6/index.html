@@ -7,27 +7,35 @@
 </head>
 <body>
     <h1>Jeu du Memory</h1>
+    
+    <div class="stats-container">
+        <p>Essais : <span id="stats-count">0</span></p>
+        <button id="restart-btn">Recommencer</button>
+    </div>
+
     <div class="grid-container">
-        <div class="card"><img src="assets/Image/cerf.png" alt="cerf"></div>
-        <div class="card"><img src="assets/Image/cerf - Copie.png" alt="cerf"></div>        
-        <div class="card"><img src="assets/Image/cheval.png" alt="cheval"></div>
-        <div class="card"><img src="assets/Image/cheval - Copie.png" alt="cheval"></div>  
-        <div class="card"><img src="assets/Image/chouette.png" alt="chouette"></div>
-        <div class="card"><img src="assets/Image/chouette - Copie.png" alt="chouette"></div>  
-        <div class="card"><img src="assets/Image/ecureuil.png" alt="ecureuil"></div>
-        <div class="card"><img src="assets/Image/ecureuil - Copie.png" alt="ecureuil"></div>
-        <div class="card"><img src="assets/Image/herisson.png" alt="herisson"></div>
-        <div class="card"><img src="assets/Image/herisson - Copie.png" alt="herisson"></div>
-        <div class="card"><img src="assets/Image/lapin.png" alt="lapin"></div>
-        <div class="card"><img src="assets/Image/lapin - Copie.png" alt="lapin"></div>
-        <div class="card"><img src="assets/Image/panda.png" alt="panda"></div>
-        <div class="card"><img src="assets/Image/panda - Copie.png" alt="panda"></div>
-        <div class="card"><img src="assets/Image/pinguin.png" alt="pinguin"></div>
-        <div class="card"><img src="assets/Image/pinguin - Copie.png" alt="pinguin"></div>
-        <div class="card"><img src="assets/Image/raton_laveur.png" alt="raton_laveur"></div>
-        <div class="card"><img src="assets/Image/raton_laveur - Copie.png" alt="raton_laveur"></div>
-        <div class="card"><img src="assets/Image/renard.png" alt="renard"></div>
-        <div class="card"><img src="assets/Image/renard - Copie.png" alt="renard"></div>
-        </div>
+        <div class="card" data-animal="cerf"><img src="assets/Image/cerf.png" alt="cerf"></div>
+        <div class="card" data-animal="cerf"><img src="assets/Image/cerf - Copie.png" alt="cerf"></div>        
+        <div class="card" data-animal="cheval"><img src="assets/Image/cheval.png" alt="cheval"></div>
+        <div class="card" data-animal="cheval"><img src="assets/Image/cheval - Copie.png" alt="cheval"></div>  
+        <div class="card" data-animal="chouette"><img src="assets/Image/chouette.png" alt="chouette"></div>
+        <div class="card" data-animal="chouette"><img src="assets/Image/chouette - Copie.png" alt="chouette"></div>  
+        <div class="card" data-animal="ecureuil"><img src="assets/Image/ecureuil.png" alt="ecureuil"></div>
+        <div class="card" data-animal="ecureuil"><img src="assets/Image/ecureuil - Copie.png" alt="ecureuil"></div>
+        <div class="card" data-animal="herisson"><img src="assets/Image/herisson.png" alt="herisson"></div>
+        <div class="card" data-animal="herisson"><img src="assets/Image/herisson - Copie.png" alt="herisson"></div>
+        <div class="card" data-animal="lapin"><img src="assets/Image/lapin.png" alt="lapin"></div>
+        <div class="card" data-animal="lapin"><img src="assets/Image/lapin - Copie.png" alt="lapin"></div>
+        <div class="card" data-animal="panda"><img src="assets/Image/panda.png" alt="panda"></div>
+        <div class="card" data-animal="panda"><img src="assets/Image/panda - Copie.png" alt="panda"></div>
+        <div class="card" data-animal="pinguin"><img src="assets/Image/pinguin.png" alt="pinguin"></div>
+        <div class="card" data-animal="pinguin"><img src="assets/Image/pinguin - Copie.png" alt="pinguin"></div>
+        <div class="card" data-animal="raton"><img src="assets/Image/raton_laveur.png" alt="raton"></div>
+        <div class="card" data-animal="raton"><img src="assets/Image/raton_laveur - Copie.png" alt="raton"></div>
+        <div class="card" data-animal="renard"><img src="assets/Image/renard.png" alt="renard"></div>
+        <div class="card" data-animal="renard"><img src="assets/Image/renard - Copie.png" alt="renard"></div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
