@@ -1,0 +1,51 @@
+:root {
+    --primary-olive: #5d6d4e;
+    --light-bg: #fcfdf7;
+    --border: #e0e0d0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0; padding: 20px;
+}
+
+/* Formulaire */
+.input-screen { max-width: 500px; margin: 40px auto; }
+.form-card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+fieldset { border: 1px solid var(--border); margin-bottom: 20px; padding: 15px; border-radius: 5px; }
+legend { color: var(--primary-olive); font-weight: bold; padding: 0 10px; }
+input { width: 100%; padding: 10px; margin: 8px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+.row { display: flex; gap: 10px; }
+button { background: var(--primary-olive); color: white; border: none; padding: 12px; border-radius: 5px; cursor: pointer; width: 100%; font-size: 16px; }
+
+/* Devis A4 */
+.actions-bar { text-align: center; margin-bottom: 20px; }
+.btn-pdf { background: #2c3e50; margin-left: 10px; width: auto; padding: 10px 20px; }
+
+.a4-page-content {
+    width: 210mm; min-height: 297mm; background: white;
+    margin: 0 auto; padding: 25mm; box-sizing: border-box;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2); color: #333;
+}
+
+.devis-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 30px; }
+.devis-header h1 { font-size: 70pt; color: var(--primary-olive); margin: 0; font-weight: normal; letter-spacing: 5px; }
+.devis-number-display { font-size: 25pt; color: #888; }
+
+.date-validity-info { text-align: right; font-size: 11pt; color: #666; margin-bottom: 40px; }
+
+.contact-block-section { display: flex; justify-content: space-between; margin-bottom: 50px; }
+.logo-text { border: 1px solid var(--primary-olive); padding: 8px 15px; color: var(--primary-olive); font-weight: bold; margin-bottom: 10px; display: inline-block; }
+
+.devis-items-table { width: 100%; border-collapse: collapse; margin-bottom: 30px; }
+.devis-items-table th { background: var(--light-bg); border: 1px solid var(--border); color: var(--primary-olive); padding: 15px; font-weight: normal; }
+.devis-items-table td { border: 1px solid var(--border); padding: 12px; text-align: center; }
+
+.summary-block-group { width: 250px; margin-left: auto; }
+.summary-line-item { display: flex; justify-content: space-between; padding: 5px 0; font-weight: bold; }
+.total-bar-block { background: var(--primary-olive); color: white; display: flex; justify-content: space-between; padding: 12px; margin-top: 10px; }
+
+.terms-conditions-block { margin-top: 60px; font-size: 10pt; color: #555; }
+.client-signature-area { margin-top: 40px; text-align: right; width: 200px; margin-left: auto; }
+.sig-line { border-bottom: 1px solid #ccc; margin-top: 30px; }

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Générateur de Devis Trystan</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+    <div class="input-screen" id="input-screen">
+        <form id="devisForm" class="form-card" onsubmit="event.preventDefault(); genererDevis();">
+            <h2>Création du Devis</h2>
+            
+            <fieldset>
+                <legend>Destinataire</legend>
+                <input type="text" id="client-nom" placeholder="Nom du client (ex: CONCORDIA)" required>
+                <input type="tel" id="client-tel" placeholder="Téléphone (ex: 06 12 34 56 78)" 
+                       maxlength="14" required>
+                <input type="text" id="client-adresse" placeholder="Adresse (Rue, Ville)" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Détails Devis & Dalle</legend>
+                <input type="text" id="devis-num" placeholder="Numéro de devis (Chiffres uniquement)" 
+                       oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+                
+                <div class="row">
+                    <input type="number" id="surface" placeholder="Surface (m²)" min="1" step="any" required>
+                    <input type="number" id="epaisseur" placeholder="Épaisseur (0.15 à 0.35)" 
+                           min="0.15" max="0.35" step="0.01" required>
+                </div>
+            </fieldset>
+
+            <button type="submit">Visualiser le Devis</button>
+        </form>
+    </div>
+
+    <div id="devis-page" class="devis-page-sim" style="display: none;">
+        <div class="actions-bar">
+            <button onclick="window.location.reload()">Modifier les infos</button>
+            <button class="btn-pdf" onclick="telechargerPDF()">Télécharger en PDF</button>
+        </div>
+
+        <div id="devis-content-area" class="a4-page-content">
+            <div class="devis-header">
+                <h1>DEVIS</h1>
+                <span class="devis-number-display">N°<span id="display-devis-num"></span></span>
+            </div>
+
+            <div class="date-validity-info">
+                Date du devis : <span id="currentDateDisplay"></span><br>
+                Validité du devis : 1 mois
+            </div>
+
+            <div class="contact-block-section">
+                <div class="vendor-box">
+                    <div class="logo-box"><div class="logo-text">Trystan</div></div>
+                    <p><strong>CIMENTERIE Trystan</strong><br>123 Rue du Béton, Lyon<br>04 67 67 67 67<br>contact@trystan.fr</p>
+                </div>
+                <div class="client-box">
+                    <p><strong>À L'ATTENTION DE</strong><br>
+                    <span id="display-client-nom"></span><br>
+                    <span id="display-client-tel"></span><br>
+                    <span id="display-client-adresse"></span></p>
+                </div>
+            </div>
+
+            <table class="devis-items-table">
+                <thead>
+                    <tr><th>DESCRIPTION</th><th>PRIX</th><th>QUANTITÉ</th><th>TOTAL</th></tr>
+                </thead>
+                <tbody id="devis-table-body"></tbody>
+            </table>
+
+            <div class="summary-block-group">
+                <div class="summary-line-item"><span>Sous total :</span><span id="resSousTotal"></span></div>
+                <div class="summary-line-item"><span>TVA (20%) :</span><span id="resTVA"></span></div>
+                <div class="total-bar-block"><span>TOTAL :</span><span id="resTTC"></span></div>
+            </div>
+
+            <div class="terms-conditions-block">
+                <h3>Termes et conditions</h3>
+                <p>Béton dosé à 350kg/m³. Livraison par camions de 9m³.<br>
+                Ciment nécessaire : <span id="resCiment"></span> tonnes.<br>
+                Logistique : <span id="resCamions"></span> camions nécessaires.</p>
+                <div class="client-signature-area"><p>Signature du client</p><div class="sig-line"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

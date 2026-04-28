@@ -33,6 +33,8 @@
                 for($i=1; $i<=7; $i++) { $exercices[] = "zoning$i.html"; }
             } elseif ($tp == 'TP9') {
                 $exercices = ['connexion.php'];
+            } elseif ($tp == 'TP10') {
+                $exercices = ['index.html'];
             }
 
             // Affichage des liens à gauche
